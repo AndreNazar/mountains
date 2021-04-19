@@ -17,8 +17,6 @@ function showBlocks(block, zone_block, version) {
                 block.style.transform = "translateX(0)";
                 block.style.opacity = 1;
                 break;
-
-
             default:
                 break;
         }
