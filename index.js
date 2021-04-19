@@ -26,18 +26,8 @@ function showBlocks(block, zone_block, version) {
     }
 }
 
-
-/*
-function openMenu(button, menu, act) {
-    button.addEventListener('click', function () {
-        if (act === 1) menu.style.transform = "translateX(0)"
-        if (act === 0) menu.style.transform = "translateX(-200%)"
-    })
-}*/
-
 function swipeLinks(link, block) {
     link.addEventListener('click', function () {
-        //mobile.style.transform = "translateX(-200%)"
         block.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
@@ -49,11 +39,6 @@ function clearLocation(){
         links_screens[i].style.color = '#fff5'
     }
 }
-/*
-openMenu(open_mob_menu, mobile, 1);
-openMenu(quit, mobile, 0);*/
-
-/* ДЕСКТОПНЫЕ ССЫЛКИ */
 swipeLinks(scroll_link, blocks[0]);
 swipeLinks(links[0], blocks[0]);
 swipeLinks(links[1], blocks[1]);
@@ -63,13 +48,6 @@ swipeLinks(links_screens[1], blocks[0]);
 swipeLinks(links_screens[2], blocks[1]);
 swipeLinks(links_screens[3], blocks[2]);
 swipeLinks(links_screens[4], footer);
-
-/* МОБИЛЬНЫЕ ССЫЛКИ *//*
-swipeLinks(links__mobile[0], header);
-swipeLinks(links__mobile[1], about_us_block);
-swipeLinks(links__mobile[2], curated_block);
-swipeLinks(links__mobile[3], deals_block);
-swipeLinks(links__mobile[4], contacts_block);*/
 
 
 window.addEventListener('mousemove', function (e) {
@@ -96,9 +74,6 @@ window.addEventListener('scroll', function (e) {
     const max = document.documentElement.scrollHeight;
     const size_scr = Math.round((window.innerHeight*100)/max)*2;
     const procents = Math.round((curr*100)/(max-window.innerHeight)/1.23);
-
-    console.log('Размер ' + size_scr)
-    console.log('Проценты ' + procents)
 
     scroll_slider.style.width = size_scr+'px';
     scroll_slider.style.top = procents+'%';
